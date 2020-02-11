@@ -1,13 +1,12 @@
 Idea 1: The perfect travel destination
-1) You input budget, weather of preference, location and time.
-2) We would figure out destinations that fit your budget.
-APIs used: weather, currency, flights, location, possibly a Geonames API
+  For this idea, we chose to create a website that will help you choose your next travel destination. 
+ The user will create a profile with budget, weather of preference, location (continent/country) and time. 
+ We then will use APIs such as the weather, currency, and flights to compare and contrast different places to find the destination with the desired weather within your budget.
 
 Idea 2: Finding events near you
-1) You input your location and things you're interested in (artists, types of events, etc)
-2) We then cross-check with your google calendar to see when you are available to go to a certain event
-Ex: "hey we saw that you're free on Friday 5-7pm, and there's an event 5 miles away from you that we think you'd like."
-APIs used: google calendar, weather, location, an API for events(like eventbrite or whatever)
+  For this idea, we decided to use Google Calendar and another API that will give us a list of events happening near our user. 
+The objective is for the user to receive notifications of events that they might be interested in and that fits their schedule. 
+So for example, if the user inputs that they are interested in food events, they live in Boston, and they have a free block on Friday from 5-10pm, if there's a food truck event at North End at that same time we would send a notification to the user about that event. 
 
 
 
