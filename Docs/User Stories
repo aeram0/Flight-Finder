@@ -1,12 +1,16 @@
 Primary User Stories
-As a new user, I want to create a profile using my email address so I can create a profile and use the app's functionalities. At the main page, I will input my email on the text entry and click on the "create a profile" button. The page will redirect me to a page that will prompt me to create a password. If I already have an account, I will input my email and my password. If the email account is already in use by an account, the page will refresh and display an error message: "Email account already in use". I will also have the option to click on a "Forget password?" button, which will send me a link to my email so I can reset my password.  
+As a new user, I want to create a profile using my email address so I can create a profile and use the app's functionalities. 
+At the main page, I will input my email on the text entry and click on the "create a profile" button. 
+The page will redirect me to a page that will prompt me to create a password. If I already have an account, I will input my email and my password. 
+If the email account is already in use by an account, the page will refresh and display an error message: "Email account already in use". 
+I will also have the option to click on a "Forget password?" button, which will send me a link to my email so I can reset my password.  
 
 As a logged in user, I want to indicate my travel preferences so that I can book a journey. I will first choose if I know which country I want to go (but I'm not sure on which city), or if I don't know which country I want to go. 
 If I know which country I want to go to, I will input my preferences and be able to view the the lists of countries ranked by attributes   
 If I don't know which country I want to go, I will be redirected to a page where I will input my preferences: countries I would like to go (from 2 to 10 different countries), where I am located, my preferred weather, inbound and outbound dates, how many people are flying with me, and my ideal flight budget. Once that is done, I will click the "go" button and wait for the results. 
 
 Once the page refreshes, I will see two main ranked lists. 
-If I know which country I want to go to, I will see two lists of the top 10 cities within that country, ranked by weather (left column) and budget (right column). 
+If I know which country I want to go to, I will see two lists of the top 5 cities within that country, ranked by weather (left column) and budget (right column). 
 If I don't know which countries I want to go to, I will see my pre-selected countries ranked by weather (left column) and budget (right column). From here, I will be able to choose a country and see all of the relevant data and rankings for the top 10 cities in this country. 
 Every city will have a dropdown list of average weather for the chosen date, flight prices, and current currency value. At the bottom of the page, I will see recommendations of countries with similar weather or flight prices. By clicking on any of these countries, I will be redirected to a similar page, listing the top 10 cities and attributes for that country. 
 
