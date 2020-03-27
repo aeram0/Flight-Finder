@@ -1,0 +1,9 @@
+Technology we chose: 
+- HTML/Javascript
+- Flask
+- SQLAlchemy
+- Python
+
+We chose Flask because none of us have ever done anything similar to this project, and since Flask is the technology that is easiest for those who are more familiar with Python, we decided to give it a try. 
+
+We chose to do the back end in Python because it's the easiest language for all of us, and we know SQLAlchemy and hopefully we can implement that into our backend. SQLAlchemy would be useful for us, since we're trying to create a table that shows preferences according to budget/location.
