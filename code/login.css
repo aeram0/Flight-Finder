@@ -1,5 +1,5 @@
     body {
-        background-color: #F3EBF6;
+        background-color: #82DDC2;
         font-family: 'Ubuntu', sans-serif;
     }
 
@@ -14,7 +14,7 @@
 
     .sign {
         padding-top: 40px;
-        color: #8C55AA;
+        color: #82DDC2;
         font-family: 'Ubuntu', sans-serif;
         font-weight: bold;
         font-size: 23px;
@@ -88,13 +88,13 @@
 
     .forgot {
         text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
-        color: #E1BEE7;
+        color: #82DDC2;
         padding-top: 15px;
     }
 
     a {
         text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
-        color: #E1BEE7;
+        color: #82DDC2;
         text-decoration: none
     }
 
