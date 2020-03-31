@@ -1,0 +1,88 @@
+body {
+    background-color: #82DDC2;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+  .main {
+        background-color: #FFFFFF;
+        width: 400px;
+        height: 580px;
+        margin: 7em auto;
+        border-radius: 1.5em;
+        box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+
+    }
+
+    .sign {
+        padding-top: 1px;
+        color: #82DDC2;
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: bold;
+        font-size: 23px;
+    }
+
+    .content-table {
+        text-align: center;
+        border-collapse: collapse;
+        min-width: 400px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        font-family: 'Ubuntu', sans-serif;
+        color: rgb(38, 50, 56);
+        font-weight: 700;
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+
+    .content-table th {
+        padding-top: 40px;
+        background: #FFF;
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: bold;
+        font-size: 16px;
+        padding: 8px 10px;
+        color: #82DDC2;
+        border-bottom: 2px solid #82DDC2;
+
+    }
+
+    .content-table td {
+            padding: 12px 15px;
+
+}
+
+    .content-table tbody tr:nth-of-type(even) {
+        background-color: #f3f3f3;
+    }
+
+    .content-table tbody tr:last-of-type {
+        border-bottom: 2px solid #82DDC2;
+    }
+
+      .content-table tbody tr {
+        border-bottom: 1px solid #dddddd;
+    }
+
+    .new_search {
+        text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
+        color: #82DDC2;
+        padding-top: 15px;
+}
+
+a {
+        text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
+        color: #82DDC2;
+        text-decoration: none
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
