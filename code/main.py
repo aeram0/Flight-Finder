@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 from flask import Flask, redirect, url_for, render_template, request
 import code
 app = Flask(__name__)
