@@ -7,6 +7,6 @@ export FN_CLIENT_SECRET="KHXhN1_zw18Y0N-l5_s5lRem"
 
 export FLASK_APP="app.py"
 export FLASK_DEBUG=1
-export FN_FLASK_SECRET_KEY="SweggyTimesSauce"
+export FN_FLASK_SECRET_KEY="CS411"
 
 python -m flask run -p 5000

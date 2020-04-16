@@ -30,7 +30,7 @@ def backend(country, location, weather, inbound, outbound, people, budget):
 @app.route("/")
 def home():
     if googleOauth.is_logged_in():
-        return redirect('/preferences/')
+        return redirect('/main/')
     else:
         return redirect('/login/')
 
@@ -41,6 +41,10 @@ def login():
 @app.route("/preferences/")
 def pref():
     return render_template("preference_page.html")
+
+@app.route("/main/")
+def main_page():
+    return render_template("main_page.html")
 
 @app.route("/register/")
 def register():
