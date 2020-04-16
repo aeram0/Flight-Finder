@@ -1,54 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>fill information here</title>
-</head>
-<style>
-    * {
-        font-family: sans-serif; /* Change your font family */
-    }
+<html>
 
-    .content-table {
-        border-collapse: collapse;
-        margin: 25px 0;
-        font-size: 0.9em;
-        min-width: 400px;
-        border-radius: 5px 5px 0 0;
-        overflow: hidden;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-    }
-</style>
+<head>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <link href="info.css" rel="stylesheet" type=text/css>
+  <title>Sign in</title>
+</head>
+
 <body>
-<form action="#" method = "post">
-<div name="fo">
-    <table>
-        <tr>
-            <td><input type = "text" name = "countries" placeholder="input the countries you would like to go"></td>
-        </tr>
-        <tr>
-            <td><input type = "text" name = "location" placeholder="input your location"></td>
-        </tr>
-        <tr>
-            <td><input type = "text" name = "weather" placeholder="input your preferred weather"></td>
-        </tr>
-        <tr>
-            <td><input type = "date" name = "inbound" placeholder="input your inbound date"></td>
-        </tr>
-        <tr>
-            <td><input type = "date" name = "outbound" placeholder="input your outbound date"></td>
-        </tr>
-        <tr>
-            <td><input type = "text" name = "people" placeholder="input how many people are flying with you"></td>
-        </tr>
-        <tr>
-            <td><input type = "text" name = "budget" placeholder="input ideal budget"></td>
-        </tr>
-        <tr>
-            <td><input type = "submit" name = "submit" value = "go"></td>
-        </tr>
-    </table>
-</div>
-</form>
+  <div class="main">
+    <p class="sign" align="center">Travel Info</p>
+    <form class="form1">
+      <input class="countries" type="text" align="center" placeholder="Enter your desired countries">
+      <input class="location" type="text" align="center" placeholder="Enter your current location">
+
+    <input list="weather" id="weather_options" class="weather" name="weather" placeholder="Choose your desired weather">
+
+
+  <datalist id="weather">
+    <option value="<6°C">
+    <option value="Between 6°C and 17°C">
+    <option value="Between 18°C and 27°C">
+    <option value=">27°C">
+  </datalist>
+
+
+      <input class="departure" type="date" align="center" placeholder="Enter your desired departure date">       <input class="return" type="date" align="center" placeholder="Enter your desired return date">
+      <input class="passengers" type="text" align="center" placeholder="Enter the number of travellers">
+      <input class="budget" type="text" align="center" placeholder="Enter your desired budget">
+
+
+      <a  class="submit" href=result_page.html align="center"> Search</a>
+
+        <br>
+        <br>
+      <p class="back" align="center"><a href="main_page.html">Go back</a></p>
+
+      </form>
+    </div>
+
 </body>
+
 </html>
