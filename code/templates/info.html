@@ -13,23 +13,29 @@
   <div class="main">
     <p class="sign" align="center">Travel Info</p>
     <form class="form1">
-      <input class="countries" type="text" align="center" placeholder="Enter your desired countries">
-      <input class="location" type="text" align="center" placeholder="Enter your current location">
-
-    <input list="weather" id="weather_options" class="weather" name="weather" placeholder="Choose your desired weather">
 
 
-  <datalist id="weather">
-    <option value="<6°C">
-    <option value="Between 6°C and 17°C">
-    <option value="Between 18°C and 27°C">
-    <option value=">27°C">
+
+    <p>&nbsp&nbsp&nbsp&nbsp Choose your nearest airport</p>
+
+  <input list="airport" id="airport_options" class="airport" name="airport">
+
+
+ <datalist id="airport">
+    <option value="Option 1">
+    <option value="Option 2">
+    <option value="Option 3">
+    <option value="Option 4">
   </datalist>
 
+  <p>&nbsp&nbsp&nbsp&nbsp Enter your desired departure date</p>
+      <input class="departure" type="date" align="center" >
+  <p>&nbsp&nbsp&nbsp&nbsp Enter your desired return date:<p>
+      <input class="return" type="date" align="center">
 
-      <input class="departure" type="date" align="center" placeholder="Enter your desired departure date">       <input class="return" type="date" align="center" placeholder="Enter your desired return date">
-      <input class="passengers" type="text" align="center" placeholder="Enter the number of travellers">
-      <input class="budget" type="text" align="center" placeholder="Enter your desired budget">
+   <p>&nbsp&nbsp&nbsp&nbsp Enter your desired budget for plane tickets</p>
+
+      <input class="budget" type="text" align="center" placeholder="$">
 
 
       <a  class="submit" href=result_page.html align="center"> Search</a>
