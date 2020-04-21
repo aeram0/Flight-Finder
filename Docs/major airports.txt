@@ -1,0 +1,194 @@
+
+Birmingham International Airport
+Dothan Regional Airport
+Huntsville International Airport
+Mobile
+Montgomery
+Anchorage International Airport
+Fairbanks International Airport
+Juneau International Airport
+Flagstaff
+Phoenix, Phoenix Sky Harbor International Airport
+Tucson International Airport
+Yuma International Airport
+Fayetteville
+Little Rock National Airport
+Northwest Arkansas Regional Airport
+Burbank
+Fresno
+Long Beach
+Los Angeles International Airport
+Oakland
+Ontario
+Palm Springs
+Sacramento
+San Diego
+San Francisco International Airport
+San Jose
+Santa Ana
+Aspen
+Colorado Springs
+Denver International Airport
+Grand Junction
+Pueblo
+Hartford
+Tweed New Haven
+Washington, Dulles International Airport
+Washington National Airport
+Daytona Beach
+Fort Lauderdale-Hollywood International Airport
+Fort Meyers
+Jacksonville
+Key West International Airport
+Miami International Airport
+Orlando
+Pensacola
+St. Petersburg
+Sarasota
+Tampa
+West Palm Beach
+Panama City-Bay County International Airport
+Atlanta Hartsfield International Airport
+Augusta
+Savannah
+Hilo
+Honolulu International Airport
+Kahului
+Kailua
+Lihue
+Boise
+Chicago Midway Airport
+Chicago, O'Hare International Airport Airport
+Moline
+Peoria
+Evansville
+Fort Wayne
+Indianapolis International Airport
+South Bend
+Cedar Rapids
+Des Moines
+Wichita
+Lexington
+Louisville
+Baton Rouge
+New Orleans International Airport
+Shreveport
+Augusta
+Bangor
+Portland
+Baltimore
+Boston, Logan International Airport
+Hyannis
+Nantucket
+Worcester
+Battlecreek
+Detroit Metropolitan Airport
+Detroit
+Flint
+Grand Rapids
+Kalamazoo-Battle Creek International Airport
+Lansing
+Saginaw
+Duluth
+Minneapolis/St.Paul International Airport
+Rochester
+Gulfport
+Jackson
+Missouri
+Kansas City
+St Louis, Lambert International Airport
+Springfield
+Billings
+Lincoln
+Omaha
+Las Vegas, Las Vegas McCarran International Airport
+Reno-Tahoe International Airport
+Manchester
+Atlantic City International Airport
+Newark International Airport
+Trenton
+New Mexico
+Albuquerque International Airport
+Alamogordo
+Albany International Airport
+Buffalo
+Islip
+New York, John F Kennedy International Airport
+New York, La Guardia Airport
+Newburgh
+Rochester
+Syracuse
+Westchester
+Asheville
+Charlotte/Douglas International Airport
+Fayetteville
+Greensboro
+Raleigh
+Winston-Salem
+North Dakota
+Bismark
+Fargo
+Akron
+Cincinnati
+Cleveland
+Columbus
+Dayton
+Toledo
+Oklahoma City
+Tulsa
+Eugene
+Portland International Airport
+Portland, Hillsboro Airport
+Salem
+Allentown
+Erie
+Harrisburg
+Philadelphia
+Pittsburgh
+Scranton
+Providence - T.F. Green Airport
+Charleston
+Columbia
+Greenville
+Myrtle Beach
+Pierre
+Rapid City
+Sioux Falls
+Bristol
+Chattanooga
+Knoxville
+Memphis
+Nashville
+Amarillo
+Austin Bergstrom International Airport
+Corpus Christi
+Dallas Love Field Airport
+Dallas/Fort Worth International Airport
+El Paso
+Houston, William B Hobby Airport
+Houston, George Bush Intercontinental Airport
+Lubbock
+Midland
+San Antonio International Airport
+Salt Lake City
+Burlington
+Montpelier
+Rutland
+Dulles
+Newport News
+Norfolk
+Richmond
+Roanoke
+Pasco, Pasco/Tri-Cities Airport
+Seattle, Tacoma International Airport
+Spokane International Airport
+Charleston
+Clarksburg
+Huntington Tri-State Airport
+Green Bay
+Madison
+Milwaukee
+Casper
+Cheyenne
+Jackson Hole
+Rock Springs
