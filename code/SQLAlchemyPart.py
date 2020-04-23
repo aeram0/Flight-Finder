@@ -12,6 +12,10 @@ Base = declarative_base()
 from sqlalchemy import Column, Integer, String, ForeignKey
 from sqlalchemy.types import Text, Boolean
 
+
+
+
+
 #creating a table
 class Countries(Base):
     __tablename__ = 'countries'
@@ -94,5 +98,6 @@ session.add(ct9)
 session.add(ct10)
 
 session.commit()
+*/
 
 

@@ -21,16 +21,15 @@ db = SQLAlchemy(app)
 @app.route("/")
 
 
-#this might be wrong
 def info():
 	if request.form:
-	    origin = Search(title=request.form.get("origin"))
+	    origin = Search(origin=request.form.get("origin"))
 	    db.session.add(origin)
 	    db.session.commit()
-	    departureDate = Search(title=request.form.get("departureDate"))
+	    departureDate = Search(title=request.form.get("departure_date"))
 	    db.session.add(departureDate)
 	    db.session.commit()
-	    returnDate = Search(title=request.form.get("returnDate"))
+	    returnDate = Search(title=request.form.get("return_date"))
 	    db.session.add(returnDate)
 	    db.session.commit()
 	    budget = Search(title=request.form.get("budget"))
@@ -48,6 +47,7 @@ class User(db.model):
 	def __repr__(self):
 		return "User('{self.email}')"
 """
+
 class Search(db.Model):
 	SearchID = db.Column(db.Integer, primary_key=True)
 	origin = db.Column(db.String(35), nullable=False)

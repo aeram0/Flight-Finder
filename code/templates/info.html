@@ -10,17 +10,18 @@
 </head>
 
 <body>
+   <form method="POST" action="/">
+
   <div class="main">
     <p class="sign" align="center">Travel Info</p>
     <form class="form1">
-    <form method="POST" action="/">
 
 
 
 
     <p>&nbsp&nbsp&nbsp&nbsp Choose your nearest airport</p>
 
-  <input list="airport" id="airport_options" class="airport" name="airport">
+  <input list="airport" id="airport_options" class="airport" name="origin">
 
 
  <datalist id="airport">
@@ -220,13 +221,13 @@
   </datalist>
 
   <p>&nbsp&nbsp&nbsp&nbsp Enter your desired departure date</p>
-      <input class="departure" type="date" align="center" >
+      <input class="departure" type="date" name="departure_date" align="center" >
   <p>&nbsp&nbsp&nbsp&nbsp Enter your desired return date:<p>
-      <input class="return" type="date" align="center">
+      <input class="return" type="date" name="return_date" align="center">
 
    <p>&nbsp&nbsp&nbsp&nbsp Enter your desired budget for plane tickets</p>
 
-      <input class="budget" type="text" align="center" placeholder="$">
+      <input class="budget" type="text" name="budget" align="center" placeholder="$">
 
 
       <a  class="submit" href=result_page.html align="center"> Search</a>
@@ -235,9 +236,9 @@
         <br>
       <p class="back" align="center"><a href="main_page.html">Go back</a></p>
 
-      </form>
-      </form>
-    </div>
+            </form>
+        </div>
+    </form>
 
 </body>
 

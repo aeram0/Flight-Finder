@@ -1,0 +1,14 @@
+<html>
+  <body>
+    <h1>Add book</h1>
+    <form method="POST" action="/">
+        <input type="text" name="title">
+        <input type="submit" value="Add">
+    </form>
+
+    <h1>Old Searches</h1>
+    {% for search in searches %}
+      <p>{{search.origin}}</p>
+    {% endfor %}
+  </body>
+</html>
