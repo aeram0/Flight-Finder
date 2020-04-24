@@ -13,7 +13,7 @@ XX
 XX
 
 ## Dependencies
-To solve dependencies: `pip install -r installationsOAuth.txt`
+To solve dependencies: `pip install -r requirements.txt`
 
 ## To Run
 To run: `./run.sh`
