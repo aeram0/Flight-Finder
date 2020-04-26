@@ -17,8 +17,8 @@ db = SQLAlchemy(app)
 class Search(db.Model):
 	SearchID = db.Column(db.Integer, primary_key=True)
 	origin = db.Column(db.String(35), nullable=False)
-	departureDate = db.Column(db.DateTime, nullable=False)#, default=DateTime.utcnow)
-	returnDate = db.Column(db.DateTime, nullable=False)#, default=DateTime.utcnow)
+	departureDate = db.Column(db.String(12), nullable=False)#, default=DateTime.utcnow) #dateTime / date was giving issues
+	returnDate = db.Column(db.String(12), nullable=False)#, default=DateTime.utcnow) #dateTime / date was giving issues
 	budget = db.Column(db.Integer, nullable=False)
 	#user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
 
@@ -32,7 +32,6 @@ class Search(db.Model):
 @app.route('/')
 def Info():
 	all_data = Search.query.all()
-#check this
 	return render_template("info.html", searches = all_data)
 
 
