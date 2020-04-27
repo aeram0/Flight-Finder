@@ -28,7 +28,34 @@ class Search(db.Model):
 		self.returnDate = returnDate
 		self.budget = budget
 
+	def __repr__(self):
+		return "<origin: {}, departureDate: {}, returnDate: {}, budget: {}>".format(self.origin, self.departureDate, self.returnDate, self.budget)
 
+
+@app.route("/", methods=["GET", "POST"])
+def info():
+	searches = None
+	if request.form:
+		try:
+			origin = request.form['origin']
+			departureDate = request.form['departureDate']
+			returnDate = request.form['returnDate']
+			budget = request.form['budget']
+			searches = Search(origin, departureDate, returnDate, budget)
+			db.session.add(searches)
+			db.session.commit()
+		except Exception as e:
+			print("Failed to add search")
+			print(e)
+	searches = Search.query.all()
+	return render_template("info.html", searches = searches)
+
+if __name__ == "__main__":
+	db.create_all()
+	app.run(debug=True)
+
+
+"""
 @app.route('/')
 def Info():
 	all_data = Search.query.all()
@@ -53,29 +80,8 @@ def insert():
 
 if __name__ == "__main__":
     app.run(debug=True)
-
 """
-def info():
-	if request.form:
-	    origin = Search(origin=request.form.get("origin"))
-	    db.session.add(origin)
-	    db.session.commit()
 
-	    departureDate = Search(title=request.form.get("departure_date"))
-	    db.session.add(departureDate)
-	    db.session.commit()
-
-	    returnDate = Search(title=request.form.get("return_date"))
-	    db.session.add(returnDate)
-	    db.session.commit()
-
-	    budget = Search(title=request.form.get("budget"))
-	    db.session.add(budget)
-	    db.session.commit()
-	return render_template("info.html")
-
-
-"""
 
 
 
