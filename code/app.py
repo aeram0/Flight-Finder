@@ -19,13 +19,6 @@ app.secret_key = os.environ.get("FN_FLASK_SECRET_KEY", default=False)
 app.register_blueprint(googleOauth.app)
 
 # the good stuff
-# import currencies
-# def backend(country, location, weather, inbound, outbound, people, budget):
-#     # right now country is only one. We have to do something to change it into multiple countries
-#     print(currencies.finding_currency(location, country))
-#     crr = currencies.finding_currency(location, country)
-#     actual_budget = crr * int(budget)
-#     return crr, int(actual_budget)
 
 @app.route("/")
 def home():
