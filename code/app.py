@@ -41,7 +41,7 @@ def main_page():
 
 @app.route("/register/")
 def register():
-    return render_template("registerform.html")
+    return render_template("resultpage.html")
 
 
 @app.route("/info/", methods=["POST", "GET"])
