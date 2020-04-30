@@ -1,0 +1,9 @@
+Although we were unable to implement a functioning cache, below is an outline of how it would work:
+
+When a user makes a search, before calling the APIs, we would first look inside the cache to see if 
+a similar search exists. If it exists, we do not have to call the API's, and instead retrieve the 
+data from the cache.
+
+Our database currently only contains a table that tracks searches and updates whenever new preferences
+are added. So we also need to include functionality that allows the results to be stored in a separate
+table so the caching function would work. 
