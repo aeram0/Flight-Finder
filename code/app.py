@@ -65,6 +65,6 @@ def input():
 
 @app.route("/results/<string:loc>/<string:country>/<float:crr>/<int:budget>")
 def user(loc, country, crr, budget):
-    return f"<p> You are in {loc} and you want to go to {country} </p> <p> The currency of {country} is at {crr}, so your budget is: {budget}</p>"
+    return "<p> You are in {loc} and you want to go to {country} </p> <p> The currency of {country} is at {crr}, so your budget is: {budget}</p>"
 if __name__ == "__main__":
     app.run()
