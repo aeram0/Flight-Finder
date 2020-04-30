@@ -1,56 +1,10 @@
 import json
-import currencies as c
+<<<<<<< HEAD
+=======
+# import currencies as c
+>>>>>>> 39838035952d938c38a89d699986e96f69ecf916
 import requests
-
-APIresponse = {'data': [{'type': 'flight-destination', 'origin': 'BOS', 'destination': 'PHL', 'departureDate': '2020-05-21', 'returnDate': '2020-05-31', 'price': {'total': '136.60'}, 'links': {'flightDates': 'https://test.api.amadeus.com/v1/shopping/flight-dates?origin=BOS&destination=PHL&departureDate=2020-05-21&oneWay=false&duration=10&nonStop=false&maxPrice=1000&currency=USD&viewBy=DURATION', 'flightOffers': 'https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=BOS&destinationLocationCode=PHL&departureDate=2020-05-21&returnDate=2020-05-31&adults=1&nonStop=false&maxPrice=1000&currency=USD'}},
-          {'type': 'flight-destination', 'origin': 'BOS', 'destination': 'YTO', 'departureDate': '2020-05-21', 'returnDate': '2020-05-31', 'price': {'total': '279.30'}, 'links': {'flightDates': 'https://test.api.amadeus.com/v1/shopping/flight-dates?origin=BOS&destination=YTO&departureDate=2020-05-21&oneWay=false&duration=10&nonStop=false&maxPrice=1000&currency=USD&viewBy=DURATION', 'flightOffers': 'https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=BOS&destinationLocationCode=YTO&departureDate=2020-05-21&returnDate=2020-05-31&adults=1&nonStop=false&maxPrice=1000&currency=USD'}},
-          {'type': 'flight-destination', 'origin': 'BOS', 'destination': 'BDA', 'departureDate': '2020-05-21', 'returnDate': '2020-05-31', 'price': {'total': '351.29'}, 'links': {'flightDates': 'https://test.api.amadeus.com/v1/shopping/flight-dates?origin=BOS&destination=BDA&departureDate=2020-05-21&oneWay=false&duration=10&nonStop=false&maxPrice=1000&currency=USD&viewBy=DURATION', 'flightOffers': 'https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=BOS&destinationLocationCode=BDA&departureDate=2020-05-21&returnDate=2020-05-31&adults=1&nonStop=false&maxPrice=1000&currency=USD'}},
-          {'type': 'flight-destination', 'origin': 'BOS', 'destination': 'NAS', 'departureDate': '2020-05-21', 'returnDate': '2020-05-31', 'price': {'total': '376.23'}, 'links': {'flightDates': 'https://test.api.amadeus.com/v1/shopping/flight-dates?origin=BOS&destination=NAS&departureDate=2020-05-21&oneWay=false&duration=10&nonStop=false&maxPrice=1000&currency=USD&viewBy=DURATION', 'flightOffers': 'https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=BOS&destinationLocationCode=NAS&departureDate=2020-05-21&returnDate=2020-05-31&adults=1&nonStop=false&maxPrice=1000&currency=USD'}},
-          {'type': 'flight-destination', 'origin': 'BOS', 'destination': 'GND', 'departureDate': '2020-05-21', 'returnDate': '2020-05-31', 'price': {'total': '440.96'}, 'links': {'flightDates': 'https://test.api.amadeus.com/v1/shopping/flight-dates?origin=BOS&destination=GND&departureDate=2020-05-21&oneWay=false&duration=10&nonStop=false&maxPrice=1000&currency=USD&viewBy=DURATION', 'flightOffers': 'https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=BOS&destinationLocationCode=GND&departureDate=2020-05-21&returnDate=2020-05-31&adults=1&nonStop=false&maxPrice=1000&currency=USD'}},
-          {'type': 'flight-destination', 'origin': 'BOS', 'destination': 'BZE', 'departureDate': '2020-05-21', 'returnDate': '2020-05-31', 'price': {'total': '488.13'}, 'links': {'flightDates': 'https://test.api.amadeus.com/v1/shopping/flight-dates?origin=BOS&destination=BZE&departureDate=2020-05-21&oneWay=false&duration=10&nonStop=false&maxPrice=1000&currency=USD&viewBy=DURATION', 'flightOffers': 'https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=BOS&destinationLocationCode=BZE&departureDate=2020-05-21&returnDate=2020-05-31&adults=1&nonStop=false&maxPrice=1000&currency=USD'}},
-          {'type': 'flight-destination', 'origin': 'BOS', 'destination': 'PTY', 'departureDate': '2020-05-21', 'returnDate': '2020-05-31', 'price': {'total': '523.13'}, 'links': {'flightDates': 'https://test.api.amadeus.com/v1/shopping/flight-dates?origin=BOS&destination=PTY&departureDate=2020-05-21&oneWay=false&duration=10&nonStop=false&maxPrice=1000&currency=USD&viewBy=DURATION', 'flightOffers': 'https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=BOS&destinationLocationCode=PTY&departureDate=2020-05-21&returnDate=2020-05-31&adults=1&nonStop=false&maxPrice=1000&currency=USD'}},
-          {'type': 'flight-destination', 'origin': 'BOS', 'destination': 'SAL', 'departureDate': '2020-05-21', 'returnDate': '2020-05-31', 'price': {'total': '554.66'}, 'links': {'flightDates': 'https://test.api.amadeus.com/v1/shopping/flight-dates?origin=BOS&destination=SAL&departureDate=2020-05-21&oneWay=false&duration=10&nonStop=false&maxPrice=1000&currency=USD&viewBy=DURATION', 'flightOffers': 'https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=BOS&destinationLocationCode=SAL&departureDate=2020-05-21&returnDate=2020-05-31&adults=1&nonStop=false&maxPrice=1000&currency=USD'}},
-          {'type': 'flight-destination', 'origin': 'BOS', 'destination': 'BOG', 'departureDate': '2020-05-21', 'returnDate': '2020-05-31', 'price': {'total': '620.63'}, 'links': {'flightDates': 'https://test.api.amadeus.com/v1/shopping/flight-dates?origin=BOS&destination=BOG&departureDate=2020-05-21&oneWay=false&duration=10&nonStop=false&maxPrice=1000&currency=USD&viewBy=DURATION', 'flightOffers': 'https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=BOS&destinationLocationCode=BOG&departureDate=2020-05-21&returnDate=2020-05-31&adults=1&nonStop=false&maxPrice=1000&currency=USD'}},
-          {'type': 'flight-destination', 'origin': 'BOS', 'destination': 'PUJ', 'departureDate': '2020-05-21', 'returnDate': '2020-05-31', 'price': {'total': '629.23'}, 'links': {'flightDates': 'https://test.api.amadeus.com/v1/shopping/flight-dates?origin=BOS&destination=PUJ&departureDate=2020-05-21&oneWay=false&duration=10&nonStop=false&maxPrice=1000&currency=USD&viewBy=DURATION', 'flightOffers': 'https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=BOS&destinationLocationCode=PUJ&departureDate=2020-05-21&returnDate=2020-05-31&adults=1&nonStop=false&maxPrice=1000&currency=USD'}},
-          {'type': 'flight-destination', 'origin': 'BOS', 'destination': 'CPH', 'departureDate': '2020-05-21', 'returnDate': '2020-05-31', 'price': {'total': '647.32'}, 'links': {'flightDates': 'https://test.api.amadeus.com/v1/shopping/flight-dates?origin=BOS&destination=CPH&departureDate=2020-05-21&oneWay=false&duration=10&nonStop=false&maxPrice=1000&currency=USD&viewBy=DURATION', 'flightOffers': 'https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=BOS&destinationLocationCode=CPH&departureDate=2020-05-21&returnDate=2020-05-31&adults=1&nonStop=false&maxPrice=1000&currency=USD'}},
-          {'type': 'flight-destination', 'origin': 'BOS', 'destination': 'LON', 'departureDate': '2020-05-21', 'returnDate': '2020-05-31', 'price': {'total': '654.91'}, 'links': {'flightDates': 'https://test.api.amadeus.com/v1/shopping/flight-dates?origin=BOS&destination=LON&departureDate=2020-05-21&oneWay=false&duration=10&nonStop=false&maxPrice=1000&currency=USD&viewBy=DURATION', 'flightOffers': 'https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=BOS&destinationLocationCode=LON&departureDate=2020-05-21&returnDate=2020-05-31&adults=1&nonStop=false&maxPrice=1000&currency=USD'}},
-          {'type': 'flight-destination', 'origin': 'BOS', 'destination': 'AUA', 'departureDate': '2020-05-21', 'returnDate': '2020-05-31', 'price': {'total': '661.63'}, 'links': {'flightDates': 'https://test.api.amadeus.com/v1/shopping/flight-dates?origin=BOS&destination=AUA&departureDate=2020-05-21&oneWay=false&duration=10&nonStop=false&maxPrice=1000&currency=USD&viewBy=DURATION', 'flightOffers': 'https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=BOS&destinationLocationCode=AUA&departureDate=2020-05-21&returnDate=2020-05-31&adults=1&nonStop=false&maxPrice=1000&currency=USD'}},
-          {'type': 'flight-destination', 'origin': 'BOS', 'destination': 'TGU', 'departureDate': '2020-05-21', 'returnDate': '2020-05-31', 'price': {'total': '662.12'}, 'links': {'flightDates': 'https://test.api.amadeus.com/v1/shopping/flight-dates?origin=BOS&destination=TGU&departureDate=2020-05-21&oneWay=false&duration=10&nonStop=false&maxPrice=1000&currency=USD&viewBy=DURATION', 'flightOffers': 'https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=BOS&destinationLocationCode=TGU&departureDate=2020-05-21&returnDate=2020-05-31&adults=1&nonStop=false&maxPrice=1000&currency=USD'}},
-          {'type': 'flight-destination', 'origin': 'BOS', 'destination': 'MBJ', 'departureDate': '2020-05-21', 'returnDate': '2020-05-31', 'price': {'total': '690.67'}, 'links': {'flightDates': 'https://test.api.amadeus.com/v1/shopping/flight-dates?origin=BOS&destination=MBJ&departureDate=2020-05-21&oneWay=false&duration=10&nonStop=false&maxPrice=1000&currency=USD&viewBy=DURATION', 'flightOffers': 'https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=BOS&destinationLocationCode=MBJ&departureDate=2020-05-21&returnDate=2020-05-31&adults=1&nonStop=false&maxPrice=1000&currency=USD'}},
-          {'type': 'flight-destination', 'origin': 'BOS', 'destination': 'POS', 'departureDate': '2020-05-21', 'returnDate': '2020-05-31', 'price': {'total': '699.07'}, 'links': {'flightDates': 'https://test.api.amadeus.com/v1/shopping/flight-dates?origin=BOS&destination=POS&departureDate=2020-05-21&oneWay=false&duration=10&nonStop=false&maxPrice=1000&currency=USD&viewBy=DURATION', 'flightOffers': 'https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=BOS&destinationLocationCode=POS&departureDate=2020-05-21&returnDate=2020-05-31&adults=1&nonStop=false&maxPrice=1000&currency=USD'}},
-          {'type': 'flight-destination', 'origin': 'BOS', 'destination': 'DEL', 'departureDate': '2020-05-21', 'returnDate': '2020-05-31', 'price': {'total': '759.54'}, 'links': {'flightDates': 'https://test.api.amadeus.com/v1/shopping/flight-dates?origin=BOS&destination=DEL&departureDate=2020-05-21&oneWay=false&duration=10&nonStop=false&maxPrice=1000&currency=USD&viewBy=DURATION', 'flightOffers': 'https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=BOS&destinationLocationCode=DEL&departureDate=2020-05-21&returnDate=2020-05-31&adults=1&nonStop=false&maxPrice=1000&currency=USD'}},
-          {'type': 'flight-destination', 'origin': 'BOS', 'destination': 'WRO', 'departureDate': '2020-05-21', 'returnDate': '2020-05-31', 'price': {'total': '841.50'}, 'links': {'flightDates': 'https://test.api.amadeus.com/v1/shopping/flight-dates?origin=BOS&destination=WRO&departureDate=2020-05-21&oneWay=false&duration=10&nonStop=false&maxPrice=1000&currency=USD&viewBy=DURATION', 'flightOffers': 'https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=BOS&destinationLocationCode=WRO&departureDate=2020-05-21&returnDate=2020-05-31&adults=1&nonStop=false&maxPrice=1000&currency=USD'}},
-          {'type': 'flight-destination', 'origin': 'BOS', 'destination': 'BHZ', 'departureDate': '2020-05-21', 'returnDate': '2020-05-31', 'price': {'total': '860.43'}, 'links': {'flightDates': 'https://test.api.amadeus.com/v1/shopping/flight-dates?origin=BOS&destination=BHZ&departureDate=2020-05-21&oneWay=false&duration=10&nonStop=false&maxPrice=1000&currency=USD&viewBy=DURATION', 'flightOffers': 'https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=BOS&destinationLocationCode=BHZ&departureDate=2020-05-21&returnDate=2020-05-31&adults=1&nonStop=false&maxPrice=1000&currency=USD'}},
-          {'type': 'flight-destination', 'origin': 'BOS', 'destination': 'SNN', 'departureDate': '2020-05-21', 'returnDate': '2020-05-31', 'price': {'total': '868.06'}, 'links': {'flightDates': 'https://test.api.amadeus.com/v1/shopping/flight-dates?origin=BOS&destination=SNN&departureDate=2020-05-21&oneWay=false&duration=10&nonStop=false&maxPrice=1000&currency=USD&viewBy=DURATION', 'flightOffers': 'https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=BOS&destinationLocationCode=SNN&departureDate=2020-05-21&returnDate=2020-05-31&adults=1&nonStop=false&maxPrice=1000&currency=USD'}},
-          {'type': 'flight-destination', 'origin': 'BOS', 'destination': 'MAD', 'departureDate': '2020-05-21', 'returnDate': '2020-05-31', 'price': {'total': '913.22'}, 'links': {'flightDates': 'https://test.api.amadeus.com/v1/shopping/flight-dates?origin=BOS&destination=MAD&departureDate=2020-05-21&oneWay=false&duration=10&nonStop=false&maxPrice=1000&currency=USD&viewBy=DURATION', 'flightOffers': 'https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=BOS&destinationLocationCode=MAD&departureDate=2020-05-21&returnDate=2020-05-31&adults=1&nonStop=false&maxPrice=1000&currency=USD'}},
-          {'type': 'flight-destination', 'origin': 'BOS', 'destination': 'ALG', 'departureDate': '2020-05-21', 'returnDate': '2020-05-31', 'price': {'total': '953.36'}, 'links': {'flightDates': 'https://test.api.amadeus.com/v1/shopping/flight-dates?origin=BOS&destination=ALG&departureDate=2020-05-21&oneWay=false&duration=10&nonStop=false&maxPrice=1000&currency=USD&viewBy=DURATION', 'flightOffers': 'https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=BOS&destinationLocationCode=ALG&departureDate=2020-05-21&returnDate=2020-05-31&adults=1&nonStop=false&maxPrice=1000&currency=USD'}},
-          {'type': 'flight-destination', 'origin': 'BOS', 'destination': 'SOF', 'departureDate': '2020-05-21', 'returnDate': '2020-05-31', 'price': {'total': '982.64'}, 'links': {'flightDates': 'https://test.api.amadeus.com/v1/shopping/flight-dates?origin=BOS&destination=SOF&departureDate=2020-05-21&oneWay=false&duration=10&nonStop=false&maxPrice=1000&currency=USD&viewBy=DURATION', 'flightOffers': 'https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=BOS&destinationLocationCode=SOF&departureDate=2020-05-21&returnDate=2020-05-31&adults=1&nonStop=false&maxPrice=1000&currency=USD'}}],
- 'dictionaries': {'currencies': {'USD': 'US DOLLAR'},
-                  'locations': {'NAS': {'subType': 'AIRPORT', 'detailedName': 'LYNDEN PINDLING INTL'},
-                                'TGU': {'subType': 'AIRPORT', 'detailedName': 'TONCONTIN INTL'},
-                                'PUJ': {'subType': 'AIRPORT', 'detailedName': 'INTERNATIONAL'},
-                                'BOS': {'subType': 'AIRPORT', 'detailedName': 'EDWARD L LOGAN INTL'},
-                                'LON': {'subType': 'CITY', 'detailedName': 'LONDON'},
-                                'DEL': {'subType': 'AIRPORT', 'detailedName': 'INDIRA GANDHI INTL'},
-                                'SOF': {'subType': 'AIRPORT', 'detailedName': 'SOFIA'},
-                                'BZE': {'subType': 'AIRPORT', 'detailedName': 'P.S.W. GOLDSON INTL'},
-                                'AUA': {'subType': 'AIRPORT', 'detailedName': 'REINA BEATRIX'},
-                                'MAD': {'subType': 'AIRPORT', 'detailedName': 'ADOLFO SUAREZ BARAJAS'},
-                                'SNN': {'subType': 'AIRPORT', 'detailedName': 'SHANNON'},
-                                'MBJ': {'subType': 'AIRPORT', 'detailedName': 'SANGSTER INTL'},
-                                'PTY': {'subType': 'AIRPORT', 'detailedName': 'TOCUMEN INTL'},
-                                'POS': {'subType': 'AIRPORT', 'detailedName': 'PIARCO INTL'},
-                                'BHZ': {'subType': 'CITY', 'detailedName': 'BELO HORIZONTE'},
-                                'WRO': {'subType': 'AIRPORT', 'detailedName': 'NICOLAUS COPERNICUS'},
-                                'YTO': {'subType': 'CITY', 'detailedName': 'TORONTO'},
-                                'PHL': {'subType': 'AIRPORT', 'detailedName': 'PHILADELPHIA INTL'},
-                                'CPH': {'subType': 'AIRPORT', 'detailedName': 'KASTRUP'},
-                                'BOG': {'subType': 'AIRPORT', 'detailedName': 'EL DORADO INTL'},
-                                'GND': {'subType': 'AIRPORT', 'detailedName': 'MAURICE BISHOP INTL'},
-                                'ALG': {'subType': 'AIRPORT', 'detailedName': 'HOUARI BOUMEDIENE'},
-                                'BDA': {'subType': 'AIRPORT', 'detailedName': 'L.F WADE INTERNATIONAL'},
-                                'SAL': {'subType': 'AIRPORT', 'detailedName': 'EL SALVADOR INTL'}}},
- 'meta': {'currency': 'USD', 'links': {'self': 'https://test.api.amadeus.com/v1/shopping/flight-destinations?origin=BOS&departureDate=2020-05-21&oneWay=false&duration=10&nonStop=false&maxPrice=1000&viewBy=COUNTRY'}, 'defaults': {'oneWay': False, 'nonStop': False}}}
+from amadeus import Client, ResponseError
 
 countriesDict = {
     "Afghanistan": ["KBL"],
@@ -466,6 +420,268 @@ currenciesDict = {
     "ZAR": ["Eswatini", "Namibia", "South Africa"]
 }
 
+airportsDict = {
+    "Alabama": ["AL"],
+    "Birmingham International Airport": ["BHM"],
+    "Dothan Regional Airport": ["DHN"],
+    "Huntsville International Airport": ["HSV"],
+    "Mobile": ["MOB"],
+    "Montgomery": ["MGM"],
+    "Alaska": ["AK"],
+    "Anchorage International Airport": ["ANC"],
+    "Fairbanks International Airport": ["FAI"],
+    "Juneau International Airport": ["JNU"],
+    "Arizona": ["AZ"],
+    "Flagstaff": ["FLG"],
+    "Phoenix, Phoenix Sky Harbor International Airport": ["PHX"],
+    "Tucson International Airport": ["TUS"],
+    "Yuma International Airport": ["YUM"],
+    "Arkansas": ["AR"],
+    "Little Rock National Airport": ["LIT"],
+    "Northwest Arkansas Regional Airport": ["XNA"],
+    "California": ["CA"],
+    "Burbank": ["BUR"],
+    "Fresno": ["FAT"],
+    "Long Beach": ["LGB"],
+    "Los Angeles International Airport": ["LAX"],
+    "Oakland": ["OAK"],
+    "Ontario": ["ONT"],
+    "Palm Springs": ["PSP"],
+    "Sacramento": ["SMF"],
+    "San Diego": ["SAN"],
+    "San Francisco International Airport": ["SFO"],
+    "San Jose": ["SJC"],
+    "Santa Ana": ["SNA"],
+    "Colorado": ["CO"],
+    "Aspen": ["ASE"],
+    "Colorado Springs": ["COS"],
+    "Denver International Airport": ["DEN"],
+    "Grand Junction": ["GJT"],
+    "Pueblo": ["PUB"],
+    "Connecticut": ["CT"],
+    "Hartford": ["BDL"],
+    "Tweed New Haven": ["HVN"],
+    "District of Columbia": ["DC"],
+    "Washington, Dulles International Airport": ["IAD"],
+    "Washington National Airport": ["DCA"],
+    "Florida": ["FL"],
+    "Daytona Beach": ["DAB"],
+    "Fort Lauderdale-Hollywood International Airport": ["FLL"],
+    "Fort Meyers": ["RSW"],
+    "Jacksonville": ["JAX"],
+    "Key West International Airport": ["EYW"],
+    "Miami International Airport": ["MIA"],
+    "Orlando": ["MCO"],
+    "Pensacola": ["PNS"],
+    "St. Petersburg": ["PIE"],
+    "Sarasota": ["SRQ"],
+    "Tampa": ["TPA"],
+    "West Palm Beach": ["PBI"],
+    "Panama City-Bay County International Airport": ["PFN"],
+    "Georgia": ["GA"],
+    "Atlanta Hartsfield International Airport": ["ATL"],
+    "Augusta": ["AGS"],
+    "Savannah": ["SAV"],
+    "Hawaii": ["HI"],
+    "Hilo": ["ITO"],
+    "Honolulu International Airport": ["HNL"],
+    "Kahului": ["OGG"],
+    "Kailua": ["KOA"],
+    "Lihue": ["LIH"],
+    "Idaho": ["ID"],
+    "Boise": ["BOI"],
+    "Illinois": ["IL"],
+    "Chicago Midway Airport": ["MDW"],
+    "Chicago, O'Hare International Airport Airport": ["ORD"],
+    "Moline": ["MLI"],
+    "Peoria": ["PIA"],
+    "Indiana": ["IN"],
+    "Evansville": ["EVV"],
+    "Fort Wayne": ["FWA"],
+    "Indianapolis International Airport": ["IND"],
+    "South Bend": ["SBN"],
+    "Iowa": ["IA"],
+    "Cedar Rapids": ["CID"],
+    "Des Moines": ["DSM"],
+    "Kansas": ["KS"],
+    "Wichita": ["ICT"],
+    "Kentucky": ["KY"],
+    "Lexington": ["LEX"],
+    "Louisville": ["SDF"],
+    "Louisiana": ["LA"],
+    "Baton Rouge": ["BTR"],
+    "New Orleans International Airport": ["MSY"],
+    "Shreveport": ["SHV"],
+    "Maine": ["ME"],
+    "Bangor": ["BGR"],
+    "Portland": ["PWM"],
+    "Maryland": ["MD"],
+    "Baltimore": ["BWI"],
+    "Massachusetts": ["MA"],
+    "Boston, Logan International Airport": ["BOS"],
+    "Hyannis": ["HYA"],
+    "Nantucket": ["ACK"],
+    "Worcester": ["ORH"],
+    "Michigan": ["MI"],
+    "Battlecreek": ["BTL"],
+    "Detroit Metropolitan Airport": ["DTW"],
+    "Detroit": ["DET"],
+    "Flint": ["FNT"],
+    "Grand Rapids": ["GRR"],
+    "Kalamazoo-Battle Creek International Airport": ["AZO"],
+    "Lansing": ["LAN"],
+    "Saginaw": ["MBS"],
+    "Minnesota": ["MN"],
+    "Duluth": ["DLH"],
+    "Minneapolis/St.Paul International Airport": ["MSP"],
+    "Mississippi": ["MS"],
+    "Gulfport": ["GPT"],
+    "Jackson": ["JAN"],
+    "Missouri": ["MO"],
+    "Kansas City": ["MCI"],
+    "St Louis, Lambert International Airport": ["STL"],
+    "Springfield": ["SGF"],
+    "Montana": ["MT"],
+    "Billings": ["BIL"],
+    "Nebraska": ["NE"],
+    "Lincoln": ["LNK"],
+    "Omaha": ["OMA"],
+    "Nevada": ["NV"],
+    "Las Vegas, Las Vegas McCarran International Airport": ["LAS"],
+    "Reno-Tahoe International Airport": ["RNO"],
+    "New Hampshire": ["NH"],
+    "Manchester": ["MHT"],
+    "New Jersey": ["NJ"],
+    "Atlantic City International Airport": ["ACY"],
+    "Newark International Airport": ["EWR"],
+    "Trenton": ["TTN"],
+    "New Mexico": ["NM"],
+    "Albuquerque International Airport": ["ABQ"],
+    "Alamogordo": ["ALM"],
+    "New York": ["NY"],
+    "Albany International Airport": ["ALB"],
+    "Buffalo": ["BUF"],
+    "Islip": ["ISP"],
+    "New York, John F Kennedy International Airport": ["JFK"],
+    "New York, La Guardia Airport": ["LGA"],
+    "Newburgh": ["SWF"],
+    "Rochester": ["ROC"],
+    "Syracuse": ["SYR"],
+    "Westchester": ["HPN"],
+    "North Carolina": ["NC"],
+    "Asheville": ["AVL"],
+    "Charlotte/Douglas International Airport": ["CLT"],
+    "Fayetteville": ["FAY"],
+    "Greensboro": ["GSO"],
+    "Raleigh": ["RDU"],
+    "Winston-Salem": ["INT"],
+    "North Dakota": ["ND"],
+    "Bismark": ["BIS"],
+    "Fargo": ["FAR"],
+    "Ohio": ["OH"],
+    "Akron": ["CAK"],
+    "Cincinnati": ["CVG"],
+    "Cleveland": ["CLE"],
+    "Columbus": ["CMH"],
+    "Dayton": ["DAY"],
+    "Toledo": ["TOL"],
+    "Oklahoma": ["OK"],
+    "Oklahoma City": ["OKC"],
+    "Tulsa": ["TUL"],
+    "Oregon": ["OR"],
+    "Eugene": ["EUG"],
+    "Portland International Airport": ["PDX"],
+    "Portland, Hillsboro Airport": ["HIO"],
+    "Salem": ["SLE"],
+    "Pennsylvania": ["PA"],
+    "Allentown": ["ABE"],
+    "Erie": ["ERI"],
+    "Harrisburg": ["MDT"],
+    "Philadelphia": ["PHL"],
+    "Pittsburgh": ["PIT"],
+    "Scranton": ["AVP"],
+    "Rhode Island": ["RI"],
+    "Providence - T.F. Green Airport": ["PVD"],
+    "South Carolina": ["SC"],
+    "Charleston": ["CHS"],
+    "Columbia": ["CAE"],
+    "Greenville": ["GSP"],
+    "Myrtle Beach": ["MYR"],
+    "South Dakota": ["SD"],
+    "Pierre": ["PIR"],
+    "Rapid City": ["RAP"],
+    "Sioux Falls": ["FSD"],
+    "Tennessee": ["TN"],
+    "Bristol": ["TRI"],
+    "Chattanooga": ["CHA"],
+    "Knoxville": ["TYS"],
+    "Memphis": ["MEM"],
+    "Nashville": ["BNA"],
+    "Texas": ["TX"],
+    "Amarillo": ["AMA"],
+    "Austin Bergstrom International Airport": ["AUS"],
+    "Corpus Christi": ["CRP"],
+    "Dallas Love Field Airport": ["DAL"],
+    "Dallas/Fort Worth International Airport": ["DFW"],
+    "El Paso": ["ELP"],
+    "Houston, William B Hobby Airport": ["HOU"],
+    "Houston, George Bush Intercontinental Airport": ["IAH"],
+    "Lubbock": ["LBB"],
+    "Midland": ["MAF"],
+    "San Antonio International Airport": ["SAT"],
+    "Utah": ["UT"],
+    "Salt Lake City": ["SLC"],
+    "Vermont": ["VT"],
+    "Burlington": ["BTV"],
+    "Montpelier": ["MPV"],
+    "Rutland": ["RUT"],
+    "Virginia": ["VA"],
+    "Dulles": ["IAD"],
+    "Newport News": ["PHF"],
+    "Norfolk": ["ORF"],
+    "Richmond": ["RIC"],
+    "Roanoke": ["ROA"],
+    "Washington": ["WA"],
+    "Pasco, Pasco/Tri-Cities Airport": ["PSC"],
+    "Seattle, Tacoma International Airport": ["SEA"],
+    "Spokane International Airport": ["GEG"],
+    "West Virginia": ["WV"],
+    "Clarksburg": ["CKB"],
+    "Huntington Tri-State Airport": ["HTS"],
+    "Wisconsin": ["WI"],
+    "Green Bay": ["GRB"],
+    "Madison": ["MSN"],
+    "Milwaukee": ["MKE"],
+    "Wyoming": ["WY"],
+    "Casper": ["CPR"],
+    "Cheyenne": ["CYS"],
+    "Jackson Hole": ["JAC"],
+    "Rock Springs": ["RKS"],
+}
+
+
+def flight_api(location, departure, duration, budget):
+
+    air_code = airport_code(location)
+
+    amadeus = Client(
+        client_id='gMB3jPrGJCXWN1g87IDNrMYV5rYJuD4h',
+        client_secret='cG4v5dCCAsPynuKA'
+    )
+
+    try:
+        response = amadeus.shopping.flight_destinations.get(
+            origin=air_code,
+            departureDate=departure,
+            duration=duration,
+            maxPrice=budget,
+            viewBy="COUNTRY")
+        result = main_func(response.result)
+        return result
+    except ResponseError as error:
+        print(error)
+
+
 def main_func(response):
     final = [["Origin", "Airport", "Country of Destination", "Departure Date", "Return Date", "Flight price", "Currency"]]
 
@@ -492,8 +708,8 @@ def main_func(response):
         line += [currency]
         final += [line]
 
-    for i in final:
-        print(i)
+    return final
+
 
 def finding_currency2(currency_origin, country_destination):
     # need to find currency for the destination country
@@ -507,11 +723,13 @@ def finding_currency2(currency_origin, country_destination):
     except KeyError:
         return "Currency not found"
 
+
 def country(airport):
     for key, values in countriesDict.items():
         for value in values:
             if value == airport:
                 return key
+
 
 def curr(country):
     for key, values in currenciesDict.items():
@@ -520,4 +738,13 @@ def curr(country):
                 return key
     return ""
 
-main_func(APIresponse)
+
+def airport_code(name):
+    for key, values in airportsDict.items():
+        for value in values:
+            #print(key)
+            if key == name:
+                return value
+
+
+#print(flight_api("Boston, Logan International Airport", "2020-05-21", "10", "1000"))
