@@ -2,6 +2,7 @@
 from flask import Flask, redirect, url_for, render_template, request
 import code
 
+import api_calls
 import functools
 import json
 import os
@@ -41,25 +42,30 @@ def main_page():
 
 @app.route("/register/")
 def register():
-    return render_template("resultpage.html")
+    return render_template("result_page.html")
 
 
 @app.route("/info/", methods=["POST", "GET"])
 def input():
     if request.method == "POST":
-        ct = request.form["countries"]
-        lc = request.form["location"]
-        wt = request.form["weather"]
-        inb = request.form["inbound"]
-        out = request.form["outbound"]
-        ppl = request.form["people"]
-        bud = request.form["budget"]
-        # total = backend(ct, lc, wt, inb, out, ppl, bud)
-        return redirect((url_for("user", loc = lc, country = ct, crr = 300, budget = 500)))
+        location = request.form["origins"]
+        departure = request.form["departureDate"]
+        duration = request.form["duration"]
+        budget = request.form["budget"]
+        # function for location -> ISO code
+        # departure: mm-dd-yyyy -> yyyy-mm-dd
+        # return date -> departure-return
+        # 2d_list = api_call(loc, dep, dur, budget) 
+        departureYear = departure[6:]
+        departureMonth = departure[0:2]
+        departureDay = departure[3:5]
+        departure = "" + departureYear + "-" + departureMonth + "-" + departureDay
+        # output = api_calls(location, departure, duration, budget)
+        arr = [["2020-08-23"], ["$300"], ["Hello"]]
+        return render_template("result_page.html", data=arr)
+        # return redirect((url_for("user", loc = location, country = location, crr = 300, budget = 500)))
         #return redirect(url_for("user", loc = lc, country = ct))
-    # Search for something in db
-        # if found pull from db
-        # if not found make API call and store in db
+    
     else:
         return render_template("info.html")
 

@@ -1,4 +1,8 @@
 import json
+<<<<<<< HEAD
+=======
+# import currencies as c
+>>>>>>> 39838035952d938c38a89d699986e96f69ecf916
 import requests
 from amadeus import Client, ResponseError
 
