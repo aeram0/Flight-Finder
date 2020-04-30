@@ -1,5 +1,5 @@
 import json
-import currencies as c
+# import currencies as c
 import requests
 
 APIresponse = {'data': [{'type': 'flight-destination', 'origin': 'BOS', 'destination': 'PHL', 'departureDate': '2020-05-21', 'returnDate': '2020-05-31', 'price': {'total': '136.60'}, 'links': {'flightDates': 'https://test.api.amadeus.com/v1/shopping/flight-dates?origin=BOS&destination=PHL&departureDate=2020-05-21&oneWay=false&duration=10&nonStop=false&maxPrice=1000&currency=USD&viewBy=DURATION', 'flightOffers': 'https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=BOS&destinationLocationCode=PHL&departureDate=2020-05-21&returnDate=2020-05-31&adults=1&nonStop=false&maxPrice=1000&currency=USD'}},
