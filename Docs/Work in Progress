@@ -1,0 +1,6 @@
+Below is a list of the functionalities we were unable to implement:
+
+- Slight errors linking CSS through Flask
+- Bugs when calling APIs for result page
+- Unable to pull search results from cache
+- Intended to implement old searches page using data from the database
