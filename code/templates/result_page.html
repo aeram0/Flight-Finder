@@ -12,83 +12,14 @@
 <div class="main">
 <p class="sign" align="center"></p>
 
-<table class="content-table">
-    <thead>
-        <tr>
-            <th>Rank</th>
-            <th>City</th>
-            <th>Weather</th>
-            <th>Price</th>
-        </tr>
-    </thead>
-    <tbody>
-    <tr>
-        <td>1</td>
-        <td>Domenic</td>
-        <td>23</td>
-        <td>0</td>
-    </tr>
-    <tr class="active-row">
-        <td>2</td>
-        <td>Sally</td>
-        <td>23</td>
-        <td>0</td>
-    </tr>
-    <tr>
-        <td>3</td>
-        <td>Nick</td>
-        <td>23</td>
-        <td>0</td>
-    </tr>
-    <tr>
-        <td>3</td>
-        <td>Nick</td>
-        <td>23</td>
-        <td>0</td>
-    </tr>
-    <tr>
-        <td>4</td>
-        <td>Nick</td>
-        <td>23</td>
-        <td>0</td>
-    </tr>
-    <tr>
-        <td>5</td>
-        <td>Nick</td>
-        <td>23</td>
-        <td>0</td>
-    </tr>
-    <tr>
-        <td>6</td>
-        <td>Nick</td>
-        <td>23</td>
-        <td>0</td>
-    </tr>
-    <tr>
-        <td>7</td>
-        <td>Nick</td>
-        <td>23</td>
-        <td>0</td>
-    </tr>
-    <tr>
-        <td>8</td>
-        <td>Nick</td>
-        <td>23</td>
-        <td>0</td>
-    </tr>
-    <tr>
-        <td>9</td>
-        <td>Nick</td>
-        <td>23</td>
-        <td>0</td>
-    </tr>
-    <tr>
-        <td>10</td>
-        <td>Nick</td>
-        <td>23</td>
-        <td>0</td>
-    </tr>
-</table>
+  {% for row in data %}
+            {{row[0]}}
+        <ul>
+                {% for element in row[1:] %}
+                    <li>{{element|join(', ')}}<li>
+                {% endfor %}
+        </ul>
+{% endfor %}
 
 <form method="POST" action="/">
 
