@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import json
 
 import requests
@@ -676,6 +677,7 @@ def flight_api(location, departure, duration, budget):
         result = main_func(response.result)
         return result
     except ResponseError as error:
+        print("ERROR: ")
         print(error)
 
 
