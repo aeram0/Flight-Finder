@@ -48,29 +48,31 @@ def register():
 @app.route("/info/", methods=["POST", "GET"])
 def input():
     if request.method == "POST":
-        location = request.form["origins"]
-        departure = request.form["departureDate"]
-        duration = request.form["duration"]
-        budget = request.form["budget"]
+        location = str(request.form["origin"])
+        departure = str(request.form["departureDate"])
+        duration = str(request.form["duration"])
+        budget = str(request.form["budget"])
         # function for location -> ISO code
         # departure: mm-dd-yyyy -> yyyy-mm-dd
         # return date -> departure-return
         # 2d_list = api_call(loc, dep, dur, budget) 
-        departureYear = departure[6:]
-        departureMonth = departure[0:2]
-        departureDay = departure[3:5]
-        departure = "" + departureYear + "-" + departureMonth + "-" + departureDay
-        # output = api_calls(location, departure, duration, budget)
-        arr = [["2020-08-23"], ["$300"], ["Hello"]]
-        return render_template("result_page.html", data=arr)
+        helper = departure.split("-")
+        departure = helper[0] + "-" + helper[1] + "-" + helper[2]
+        print(departure)
+        arr = api_calls.flight_api(location, departure, duration, budget)
+        print(arr)
+        # arr = [["2020-08-23"], ["$300"], ["Hello"]]
+        # return render_template("result_page.html")
+        print(departure, location, budget)
+        return redirect((url_for("user", a1 = arr)))
         # return redirect((url_for("user", loc = location, country = location, crr = 300, budget = 500)))
         #return redirect(url_for("user", loc = lc, country = ct))
     
     else:
         return render_template("info.html")
 
-@app.route("/results/<string:loc>/<string:country>/<float:crr>/<int:budget>")
-def user(loc, country, crr, budget):
-    return "<p> You are in {loc} and you want to go to {country} </p> <p> The currency of {country} is at {crr}, so your budget is: {budget}</p>"
+@app.route("/results/<a1>")
+def user(a1):
+    return a1
 if __name__ == "__main__":
     app.run()
